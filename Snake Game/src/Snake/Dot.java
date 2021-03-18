@@ -1,6 +1,6 @@
 package Snake;
 
-public class Dot extends Map{
+public class Dot {
     private int[] coords = new int[2];
 
     //methods

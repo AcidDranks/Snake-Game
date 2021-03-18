@@ -1,6 +1,6 @@
 package Snake;
 
-public class Map extends GameManager{
+public class Map {
     private int[] coords = new int[2];
 
     private Dot dot = new Dot();

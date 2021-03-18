@@ -7,7 +7,7 @@ public class Snake extends Player{
         GREEN
     }
     private COLOR color = COLOR.RED;
-    private final int START_SIZE = 3;
+    private final int START_SIZE = 4;
     private final int SPEED = 1;
     private int score = 0;
     private int length = 4;

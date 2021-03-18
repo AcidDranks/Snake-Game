@@ -1,5 +1,8 @@
 package Snake;
 
 public class Main {
-    Network network = new Network();
+    public static void main(String[] args) {
+        Network network = new Network();
+        GuiManager gui = new GuiManager(); //window
+    }
 }

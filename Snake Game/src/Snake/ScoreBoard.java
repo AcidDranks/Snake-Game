@@ -1,6 +1,6 @@
 package Snake;
 
-public class ScoreBoard extends GameManager {
+public class ScoreBoard {
     Player[] players = new Player[2];
 
     private void updateScores()
