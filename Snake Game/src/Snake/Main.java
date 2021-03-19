@@ -3,6 +3,6 @@ package Snake;
 public class Main {
     public static void main(String[] args) {
         Network network = new Network();
-        GuiManager gui = new GuiManager(); //window
+        new GuiManager(); //window
     }
 }
