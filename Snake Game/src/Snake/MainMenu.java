@@ -59,12 +59,8 @@ class MainMenu implements ActionListener {
 
     //Methods
     public JPanel getMainMenuPanel() { return mainMenuPanel; }
-    public void showMainMenu() {
-        mainMenuPanel.setVisible(true);
-    }
-    public void hideMainMenu() {
-        mainMenuPanel.setVisible(false);
-    }
+    public void showMainMenu() { mainMenuPanel.setVisible(true); }
+    public void hideMainMenu() { mainMenuPanel.setVisible(false); }
 
     //button actions
     @Override
