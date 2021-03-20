@@ -26,7 +26,7 @@ public class GuiManager {
         mainWindow.setLayout(null);
 
         //add components
-        mainWindow.add(mainMenu.getMainMenuPanel());
+        mainWindow.add(mainMenu.getMenuPanel());
     }
 
     public JFrame getMainWindow() { return mainWindow; }

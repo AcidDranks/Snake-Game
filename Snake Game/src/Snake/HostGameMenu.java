@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class HostGameMenu implements ActionListener {
+class HostGameMenu extends Menu implements ActionListener {
 
     private final JPanel hostGameMenu = new JPanel();
 
@@ -15,10 +15,11 @@ class HostGameMenu implements ActionListener {
         hostGameMenu.setBackground(new Color(150, 150, 150));
     }
 
-    public void showHostMenu() {
+    public JPanel getMenuPanel() { return hostGameMenu; }
+    public void showMenu() {
         hostGameMenu.setVisible(true);
     }
-    public void hideHostMenu() {
+    public void hideMenu() {
         hostGameMenu.setVisible(false);
     }
 

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class MainMenu implements ActionListener {
+class MainMenu extends Menu implements ActionListener {
 
     //declare variables
     private final GuiManager guiManager;
@@ -58,19 +58,19 @@ class MainMenu implements ActionListener {
     }
 
     //Methods
-    public JPanel getMainMenuPanel() { return mainMenuPanel; }
-    public void showMainMenu() { mainMenuPanel.setVisible(true); }
-    public void hideMainMenu() { mainMenuPanel.setVisible(false); }
+    public JPanel getMenuPanel() { return mainMenuPanel; }
+    public void showMenu() { mainMenuPanel.setVisible(true); }
+    public void hideMenu() { mainMenuPanel.setVisible(false); }
 
     //button actions
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.hostGameBtn) {
-            this.hideMainMenu();
-            guiManager.getHostGameMenu().showHostMenu();
+            this.hideMenu();
+            guiManager.getHostGameMenu().showMenu();
         }
         else if (e.getSource() == this.joinGameBtn) {
-            this.hideMainMenu();
+            this.hideMenu();
 
         }
         else if (e.getSource() == this.exitBtn) {
