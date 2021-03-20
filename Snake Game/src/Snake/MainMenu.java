@@ -18,17 +18,18 @@ class MainMenu extends Menu implements ActionListener {
 
         this.guiManager = guiManager;
 
-        //main menu
+        //this menu
         mainMenuPanel.setBounds(0, 0, GameManager.WINDOW_WIDTH, GameManager.WINDOW_HEIGHT);
         mainMenuPanel.setVisible(true);
         mainMenuPanel.setBackground(new Color(150, 150, 150));
+        mainMenuPanel.setLayout(null);
 
+        //add components
         JLabel title = new JLabel();
         mainMenuPanel.add(title);
         mainMenuPanel.add(hostGameBtn);
         mainMenuPanel.add(joinGameBtn);
         mainMenuPanel.add(exitBtn);
-        mainMenuPanel.setLayout(null);
 
         //title
         title.setText("MP Snake");
@@ -58,22 +59,25 @@ class MainMenu extends Menu implements ActionListener {
     }
 
     //Methods
+    @Override
     public JPanel getMenuPanel() { return mainMenuPanel; }
+    @Override
     public void showMenu() { mainMenuPanel.setVisible(true); }
+    @Override
     public void hideMenu() { mainMenuPanel.setVisible(false); }
 
     //button actions
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == this.hostGameBtn) {
-            this.hideMenu();
+        if (e.getSource() == hostGameBtn) {
+            hideMenu();
             guiManager.getHostGameMenu().showMenu();
         }
-        else if (e.getSource() == this.joinGameBtn) {
-            this.hideMenu();
-
+        else if (e.getSource() == joinGameBtn) {
+            hideMenu();
+            guiManager.getJoinGameMenu().showMenu();
         }
-        else if (e.getSource() == this.exitBtn) {
+        else if (e.getSource() == exitBtn) {
             guiManager.getMainWindow().dispose();
         }
     }

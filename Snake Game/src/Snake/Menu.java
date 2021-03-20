@@ -3,7 +3,9 @@ package Snake;
 import javax.swing.*;
 
 public abstract class Menu {
+
     private GuiManager guiManager;
+    private JPanel panel;
 
     Menu() {
 

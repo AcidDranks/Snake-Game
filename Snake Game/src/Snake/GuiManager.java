@@ -7,7 +7,7 @@ public class GuiManager {
     private final JFrame mainWindow = new JFrame();
     private final MainMenu mainMenu = new MainMenu(this);
     private final HostGameMenu hostGameMenu = new HostGameMenu(this);
-    //private final JoinGameMenu joinGameMenu = new HostGameMenu(this);
+    private final JoinGameMenu joinGameMenu = new JoinGameMenu(this);
 
     //Constants
     static final int BUTTON_WIDTH = 200;
@@ -27,9 +27,12 @@ public class GuiManager {
 
         //add components
         mainWindow.add(mainMenu.getMenuPanel());
+        mainWindow.add(hostGameMenu.getMenuPanel());
+        mainWindow.add(joinGameMenu.getMenuPanel());
     }
 
     public JFrame getMainWindow() { return mainWindow; }
     public MainMenu getMainMenu() { return mainMenu; }
     public HostGameMenu getHostGameMenu() { return hostGameMenu; }
+    public JoinGameMenu getJoinGameMenu() { return joinGameMenu; }
 }
