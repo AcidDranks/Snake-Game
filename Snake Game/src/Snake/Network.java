@@ -7,13 +7,21 @@ public class Network {
     private boolean isHost = false;
 
     //methods
-    public void disconnect()
-    {
+
+    public void openLobby(int portNumber) {
+        this.portNumber = portNumber;
 
     }
 
-    public void joinClient()
-    {
+    public void closeLobby() {
+
+    }
+
+    public void disconnect() {
+
+    }
+
+    public void joinClient() {
 
     }
 
