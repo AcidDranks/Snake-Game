@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class JoinGameMenu extends Menu implements ActionListener {
 
     //declare variables
-    private GuiManager guiManager;
+    private final GuiManager guiManager;
     private final JPanel joinMenuPanel = new JPanel();
     private final JButton backBtn = new JButton();
 
