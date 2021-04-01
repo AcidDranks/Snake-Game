@@ -1,4 +1,6 @@
-package Snake;
+package Snake.Client;
+import Snake.Server.GameManager;
+
 import javax.swing.*;
 
 public class GuiManager {
@@ -15,7 +17,7 @@ public class GuiManager {
 
     //Global Components
 
-    GuiManager() {
+    public GuiManager() {
 
         //create window
         mainWindow.setTitle("MP Snake");

@@ -1,4 +1,7 @@
-package Snake;
+package Snake.Client;
+
+import Snake.Common.Network;
+import Snake.Server.GameManager;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package Snake;
+package Snake.Client;
 
 public class Dot {
     private int[] coords = new int[2];

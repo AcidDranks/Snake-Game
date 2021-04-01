@@ -1,4 +1,4 @@
-package Snake;
+package Snake.Client;
 
 import javax.swing.*;
 

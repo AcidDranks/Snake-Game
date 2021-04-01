@@ -1,4 +1,8 @@
-package Snake;
+package Snake.Server;
+import Snake.Client.ScoreBoard;
+import Snake.Client.Snake;
+import Snake.Common.Map;
+
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,8 +10,8 @@ import java.awt.event.ActionListener;
 
 public class GameManager extends JPanel implements ActionListener {
 
-    static final int WINDOW_HEIGHT = 900;
-    static final int WINDOW_WIDTH = 1600;
+    public static final int WINDOW_HEIGHT = 900;
+    public static final int WINDOW_WIDTH = 1600;
 
     static final int CUBE_SIZE = 20;
 
@@ -16,7 +20,7 @@ public class GameManager extends JPanel implements ActionListener {
 
     private double gameTime = 0;
 
-    GameManager(){
+    public GameManager(){
 
     }
 
