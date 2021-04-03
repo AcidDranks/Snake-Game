@@ -1,18 +1,20 @@
 package Snake.Common;
 
-import Snake.Client.Dot;
-
 public class Map {
-    private int[] coords = new int[2];
+    private int[] mapSize = {64,64};
 
     private Dot dot = new Dot();
 
+    public Map() {
+        Dot.respawn();
+    }
+
     //methods
-    public int[] getMapSize() {return coords;}
+    public int[] getMapSize() { return mapSize; }
 
     public void setMapSize(int x,int y)
     {
-        coords[0] = x;
-        coords[1] = y;
+        mapSize[0] = x;
+        mapSize[1] = y;
     }
 }

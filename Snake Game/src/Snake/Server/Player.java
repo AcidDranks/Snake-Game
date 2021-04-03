@@ -1,5 +1,6 @@
-package Snake.Client;
+package Snake.Server;
 
+import Snake.Client.Client;
 import Snake.Client.Snake;
 
 public class Player extends Client {

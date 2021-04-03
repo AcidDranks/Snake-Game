@@ -1,6 +1,8 @@
 package Snake.Client;
 
-public class Snake extends Player{
+import Snake.Server.Player;
+
+public class Snake extends Player {
     public enum COLOR {
         RED,
         BLUE,

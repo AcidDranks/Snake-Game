@@ -1,6 +1,4 @@
-package Snake.Client;
-
-import Snake.Client.Snake;
+package Snake.Server;
 
 public class ScoreBoard {
     Player[] players = new Player[2];

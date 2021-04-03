@@ -1,6 +1,7 @@
 package Snake.Client;
 
 import Snake.Common.Network;
+import Snake.Server.Player;
 
 public class Client extends Network {
     private Player player = new Player();

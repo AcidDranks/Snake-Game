@@ -1,5 +1,4 @@
 package Snake.Server;
-import Snake.Client.ScoreBoard;
 import Snake.Client.Snake;
 import Snake.Common.Map;
 
