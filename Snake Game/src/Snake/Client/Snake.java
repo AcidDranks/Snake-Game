@@ -4,9 +4,9 @@ import Snake.Server.Player;
 
 public class Snake extends Player {
     public enum COLOR {
-        RED,
-        BLUE,
-        GREEN
+        RED, // (220,20,60)
+        BLUE, //(30,144,255)
+        GREEN //(0,255,0)
     }
     private COLOR color = COLOR.RED;
     private final int START_SIZE = 4;
