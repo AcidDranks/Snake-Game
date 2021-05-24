@@ -14,6 +14,7 @@ class MainMenu extends Menu implements ActionListener {
     private final JPanel mainMenuPanel = new JPanel();
     private final JButton hostGameBtn = new JButton();
     private final JButton joinGameBtn = new JButton();
+    private final JButton singlePlayerBtn = new JButton();
     private final JButton exitBtn = new JButton();
 
     MainMenu(GuiManager guiManager) {
@@ -31,6 +32,7 @@ class MainMenu extends Menu implements ActionListener {
         mainMenuPanel.add(title);
         mainMenuPanel.add(hostGameBtn);
         mainMenuPanel.add(joinGameBtn);
+        mainMenuPanel.add(singlePlayerBtn);
         mainMenuPanel.add(exitBtn);
 
         //title
@@ -52,6 +54,12 @@ class MainMenu extends Menu implements ActionListener {
         joinGameBtn.setText("Join Game");
         joinGameBtn.setFocusable(false);
         joinGameBtn.addActionListener(this);
+
+        //single player button
+        singlePlayerBtn.setBounds(GameManager.WINDOW_WIDTH / 2 - GuiManager.BUTTON_WIDTH / 2, joinGameBtn.getY() + 100, GuiManager.BUTTON_WIDTH, GuiManager.BUTTON_HEIGHT);
+        singlePlayerBtn.setText("Single Player");
+        singlePlayerBtn.setFocusable(false);
+        singlePlayerBtn.addActionListener(this);
 
         //exit button
         exitBtn.setBounds(GameManager.WINDOW_WIDTH / 2 - GuiManager.BUTTON_WIDTH / 2, 700, GuiManager.BUTTON_WIDTH, GuiManager.BUTTON_HEIGHT);
@@ -78,6 +86,10 @@ class MainMenu extends Menu implements ActionListener {
         else if (e.getSource() == joinGameBtn) {
             hideMenu();
             guiManager.getJoinGameMenu().showMenu();
+        }
+        else if (e.getSource() == singlePlayerBtn) {
+            hideMenu();
+            //load single player function goes here
         }
         else if (e.getSource() == exitBtn) {
             guiManager.getMainWindow().dispose();
