@@ -16,11 +16,12 @@ class MainMenu extends Menu implements ActionListener {
     private final JButton joinGameBtn = new JButton();
     private final JButton singlePlayerBtn = new JButton();
     private final JButton exitBtn = new JButton();
+    private final SinglePlayer singlePlayer;
 
     MainMenu(GuiManager guiManager) {
 
         this.guiManager = guiManager;
-
+        this.singlePlayer = new SinglePlayer(guiManager);
         //this menu
         mainMenuPanel.setBounds(0, 0, GameManager.WINDOW_WIDTH, GameManager.WINDOW_HEIGHT);
         mainMenuPanel.setVisible(true);
@@ -90,6 +91,8 @@ class MainMenu extends Menu implements ActionListener {
         else if (e.getSource() == singlePlayerBtn) {
             hideMenu();
             //load single player function goes here
+            guiManager.getMainWindow().add(singlePlayer);
+            singlePlayer.beginGame();
         }
         else if (e.getSource() == exitBtn) {
             guiManager.getMainWindow().dispose();

@@ -1,6 +1,5 @@
 package Snake.Client;
 
-import Snake.Common.Network;
 import Snake.Server.GameManager;
 
 import javax.swing.*;
@@ -11,7 +10,7 @@ import java.awt.event.ActionListener;
 class HostGameMenu extends Menu implements ActionListener{
 
     //declare variables
-    private final Network network = new Network();
+
 
     private final GuiManager guiManager;
     private final JPanel hostGamePanel = new JPanel();
@@ -80,7 +79,6 @@ class HostGameMenu extends Menu implements ActionListener{
     @Override
     public void hideMenu() {
         hostGamePanel.setVisible(false);
-        network.closeLobby();
         portNumBox.setText("27100");
 
     }
@@ -95,7 +93,6 @@ class HostGameMenu extends Menu implements ActionListener{
         else if (e.getSource() == hostGameButton)
         {
             try {
-                network.openLobby(Integer.parseInt(portNumBox.getText()));
                 System.out.println("Server port set to " + Integer.parseInt(portNumBox.getText()));
             }
             catch (Exception exception) {

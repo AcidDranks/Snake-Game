@@ -25,7 +25,7 @@ public class GuiManager {
         mainWindow.setResizable(false);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWindow.setVisible(true);
-        mainWindow.setLayout(null);
+        //mainWindow.setLayout(null);
 
         //add components
         mainWindow.add(mainMenu.getMenuPanel());

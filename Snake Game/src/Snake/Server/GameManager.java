@@ -1,6 +1,4 @@
 package Snake.Server;
-import Snake.Client.Snake;
-import Snake.Common.Map;
 
 import javax.swing.JPanel;
 import java.awt.*;
@@ -13,12 +11,11 @@ public class GameManager extends JPanel implements ActionListener {
     public static final int WINDOW_HEIGHT = 900;
     public static final int WINDOW_WIDTH = 1600;
 
-    public ArrayList<Player> players;
+
 
     static final int CUBE_SIZE = 20;
 
-    private ScoreBoard scoreBoard = new ScoreBoard(players);
-    private Map map = new Map();
+
 
     private double gameTime = 0;
 
@@ -50,10 +47,6 @@ public class GameManager extends JPanel implements ActionListener {
 
     }
 
-    private void killSnake(Snake snake)
-    {
-
-    }
 
     private void checkPlayerPositions()
     {
